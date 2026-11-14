@@ -1,0 +1,50 @@
+Stardew (#A6B2B5)
+  deviation vs Bubblegum       (#FF85FF) => 3.42%
+  deviation vs White Blue      (#CDD6DB) => 0.40%
+  total deviation => 3.83%
+
+Special Delivery (#A5B2B7)
+  deviation vs Bubblegum       (#FF85FF) => 3.63%
+  deviation vs White Blue      (#CDD6DB) => 0.43%
+  total deviation => 4.05%
+
+Yreka! (#A7B3B7)
+  deviation vs Bubblegum       (#FF85FF) => 3.34%
+  deviation vs White Blue      (#CDD6DB) => 0.77%
+  total deviation => 4.10%
+
+Porch Ceiling (#A4B3B9)
+  deviation vs Bubblegum       (#FF85FF) => 3.99%
+  deviation vs White Blue      (#CDD6DB) => 0.46%
+  total deviation => 4.46%
+
+Tempered Grey (#A1AEB1)
+  deviation vs Bubblegum       (#FF85FF) => 3.63%
+  deviation vs White Blue      (#CDD6DB) => 0.83%
+  total deviation => 4.46%
+
+Pale Blue Grey (#A2ADB1)
+  deviation vs Bubblegum       (#FF85FF) => 3.71%
+  deviation vs White Blue      (#CDD6DB) => 0.79%
+  total deviation => 4.51%
+
+Mirror Mirror (#A8B0B2)
+  deviation vs Bubblegum       (#FF85FF) => 4.51%
+  deviation vs White Blue      (#CDD6DB) => 0.15%
+  total deviation => 4.66%
+
+Winter Morning Mist (#A7B3B5)
+  deviation vs Bubblegum       (#FF85FF) => 4.17%
+  deviation vs White Blue      (#CDD6DB) => 0.56%
+  total deviation => 4.73%
+
+Gull Grey (#A4ADB0)
+  deviation vs Bubblegum       (#FF85FF) => 4.05%
+  deviation vs White Blue      (#CDD6DB) => 0.68%
+  total deviation => 4.73%
+
+Casper (#AAB5B8)
+  deviation vs Bubblegum       (#FF85FF) => 3.43%
+  deviation vs White Blue      (#CDD6DB) => 1.34%
+  total deviation => 4.77%
+
