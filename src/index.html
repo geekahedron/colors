@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1d3a">
+<title>Colors · Geekahedron</title>
+<meta name="description" content="Compare named colors, find names near a target similarity, or solve a Colordle from your guesses. CIEDE2000, in the browser.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230b1d3a'/%3E%3Crect x='1' y='1' width='6' height='14' fill='%23ff8c1a'/%3E%3Crect x='9' y='1' width='6' height='14' fill='%239fb0cc'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../">Geekahedron</a>
+  <h1>Colors</h1>
+  <p class="sub">Compare two colors, find names near a target similarity, or solve a Colordle from your guesses.</p>
+  <div class="page-modes" role="tablist" aria-label="Tools">
+    <span class="muted small">Page</span>
+    <button type="button" class="ghost on" role="tab" id="tab-compare" aria-selected="true" aria-controls="panel-compare">Compare</button>
+    <button type="button" class="ghost" role="tab" id="tab-target" aria-selected="false" aria-controls="panel-target">Target</button>
+    <button type="button" class="ghost" role="tab" id="tab-solve" aria-selected="false" aria-controls="panel-solve">Solve</button>
+    <span class="pill" id="count-pill">Loading names…</span>
+  </div>
+</header>
+
+<main>
+  <section class="card" id="panel-compare" role="tabpanel" aria-labelledby="tab-compare">
+    <h2>Compare</h2>
+    <p class="muted">How similar are these two colors?</p>
+    <div class="grid2" id="compare-fields"></div>
+    <div class="compare-stage">
+      <figure class="swatch-card">
+        <div class="big-swatch empty" id="big-a"></div>
+        <figcaption>
+          <div class="swatch-name" id="name-a">Color A</div>
+          <div class="swatch-hex muted mono" id="hex-a"></div>
+        </figcaption>
+      </figure>
+      <div class="sim-readout">
+        <div class="sim-label">Similarity</div>
+        <div class="big" id="sim-value">—</div>
+        <div class="bar" id="sim-bar" aria-hidden="true"><i></i></div>
+      </div>
+      <figure class="swatch-card">
+        <div class="big-swatch empty" id="big-b"></div>
+        <figcaption>
+          <div class="swatch-name" id="name-b">Color B</div>
+          <div class="swatch-hex muted mono" id="hex-b"></div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="card" id="panel-target" role="tabpanel" aria-labelledby="tab-target" hidden>
+    <h2>Target</h2>
+    <p class="muted">Named colors whose similarity to this color is within tolerance of the target percent.</p>
+    <div class="target-grid">
+      <div id="target-color-mount"></div>
+      <label>Target similarity %
+        <input type="number" id="target-sim" min="0" max="100" step="0.01" value="90" inputmode="decimal">
+      </label>
+      <div id="target-tol"></div>
+    </div>
+    <p class="status" id="target-status" role="status"></p>
+    <div class="bar" id="target-bar" hidden><i></i></div>
+    <ol class="results" id="target-results"></ol>
+  </section>
+
+  <section class="card" id="panel-solve" role="tabpanel" aria-labelledby="tab-solve" hidden>
+    <h2>Solve</h2>
+    <p class="muted">Each guess is a color and the similarity you were shown. The list is every named color within tolerance of all of them, with the guessed names removed, closest total deviation first.</p>
+    <div id="solve-tol"></div>
+    <div id="guesses"></div>
+    <div class="row-btns">
+      <button type="button" id="add-guess">Add guess</button>
+      <button type="button" class="ghost" id="sample-guesses">Sample: White Blue 90, Bubblegum 90</button>
+    </div>
+    <p class="status" id="solve-status" role="status"></p>
+    <div class="bar" id="solve-bar" hidden><i></i></div>
+    <ol class="results" id="solve-results"></ol>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Runs entirely in your browser. Nothing is uploaded. Similarity is CIEDE2000, scaled so ΔE 0 is 100% and ΔE 100 is 0%.</p>
+  <p>Color names from <a href="https://github.com/meodai/color-names">meodai/color-names</a> © 2017 David Aerne, MIT License, plus CSS keywords that were not already in that list.</p>
+</footer>
+<noscript><p class="foot">This tool needs JavaScript. It still stays on your machine: the script only reads the color list shipped with the page.</p></noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>
