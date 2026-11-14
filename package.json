@@ -1,0 +1,9 @@
+{
+  "name": "colors",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-colors.js",
+    "test": "node --test test/similarity.test.js"
+  }
+}
